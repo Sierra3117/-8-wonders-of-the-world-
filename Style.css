@@ -146,6 +146,7 @@ body {
 div::-webkit-scrollbar{
   display: none;
 }
+/*Hides scroll bar, bad, however may be problematic for laptop users but i am sure they have page up/down keys so yehhhhhh*/
 .homeContent .HCTitle{
   margin-bottom: 10px;
   margin-top: 10px;

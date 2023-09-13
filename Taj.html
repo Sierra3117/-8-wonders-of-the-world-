@@ -32,7 +32,7 @@
             <i class="bx bxs-castle"></i>
             <span class="linksName">Great Wall of China</span>
           </a>
-          <span class="tooltip">Great Wall of China</span> 
+          <span class="tooltip">Great Wall</span> 
         </li>
         <li> 
           <a href="Petra.html">
@@ -46,7 +46,7 @@
             <i class='bx bx-body' ></i>
             <span class="linksName">Christ the Redeemer</span>
           </a>
-          <span class="tooltip">Christ the Redeemer</span> 
+          <span class="tooltip">The Redeemer</span> 
         </li>
         <li>
           <a href="Machu.html">
@@ -81,7 +81,7 @@
                 <i class='bx bxs-pyramid'></i>
                 <span class="linksName">The Pyramids of Giza</span>
             </a>
-            <span class="tooltip">The Pyramids of Giza</span> 
+            <span class="tooltip">The Pyramids</span> 
         </li>
       </ul>
     </div>
@@ -235,6 +235,23 @@
         }
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";}
+
+        
+        var input = document.getElementById("DOV");
+        var today = new Date();
+        var day = today.getDate();
+
+        // Set month to string to add leading 0
+        var mon = new String(today.getMonth()+1); //January is 0!
+        var yr = today.getFullYear();
+
+          if(mon.length < 2) { mon = "0" + mon; }
+          if(day.length < 2) { dayn = "0" + day; }
+
+          var date = new String( yr + '-' + mon + '-' + day );
+
+        input.disabled = false; 
+        input.setAttribute('max', date);
     </script>
   </body>
 </html>

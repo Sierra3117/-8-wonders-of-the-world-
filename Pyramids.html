@@ -32,7 +32,7 @@
             <i class="bx bxs-castle"></i>
             <span class="linksName">Great Wall of China</span>
           </a>
-          <span class="tooltip">Great Wall of China</span> 
+          <span class="tooltip">Great Wall</span> 
         </li>
         <li> 
           <a href="Petra.html">
@@ -46,7 +46,7 @@
             <i class='bx bx-body' ></i>
             <span class="linksName">Christ the Redeemer</span>
           </a>
-          <span class="tooltip">Christ the Redeemer</span> 
+          <span class="tooltip">The Redeemer</span> 
         </li>
         <li>
           <a href="Machu.html">
@@ -81,14 +81,14 @@
                 <i class='bx bxs-pyramid'></i>
                 <span class="linksName">The Pyramids of Giza</span>
             </a>
-            <span class="tooltip">The Pyramids of Giza</span> 
+            <span class="tooltip">The Pyramids</span> 
         </li>
       </ul>
     </div>
     <div class="homeContent" style="background-image: url(https://www.budowle.pl/files/photos/building/wielka-piramida-09fc1717b2b816364d14e25e65c6e8af.jpg);background-size:cover;">
       <div class="HCTitle">The Pyramids of Giza</div>
       <div class="MainContent"> The Great Pyramid of Giza is the largest Egyptian pyramid and served as the tomb of pharaoh Khufu, who ruled during the Fourth Dynasty of the Old Kingdom. Built in the early 26th century BC, over a period of about 27 years, the pyramid is the oldest of the Seven Wonders of the Ancient World, and the only wonder that has remained largely intact. It is the most famous monument of the Giza pyramid complex, which is part of the UNESCO World Heritage Site "Memphis and its Necropolis". It is situated at the northern end of the line of the three pyramids at Giza.
-
+5
         <br>
         <br>
         <hr>
@@ -247,6 +247,22 @@
         }
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";}
+        
+        var input = document.getElementById("DOV");
+        var today = new Date();
+        var day = today.getDate();
+
+        // Set month to string to add leading 0
+        var mon = new String(today.getMonth()+1); //January is 0!
+        var yr = today.getFullYear();
+
+          if(mon.length < 2) { mon = "0" + mon; }
+          if(day.length < 2) { dayn = "0" + day; }
+
+          var date = new String( yr + '-' + mon + '-' + day );
+
+        input.disabled = false; 
+        input.setAttribute('max', date);
     </script>
   </body>
 </html>
